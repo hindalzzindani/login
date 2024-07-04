@@ -1,0 +1,243 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: ltr;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.login-section, .promo-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 92px;
+    flex: 1;
+}
+
+.login-section {
+    background-color: #f9f9f9;
+}
+
+.promo-section {
+    background-image: url('img/1.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.promo-content {
+    text-align: center;
+    background-color: rgb(255 255 255 / 30%);
+    padding: 20px;
+    border-radius: 58px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    border: 2px solid #ccc;
+    justify-content: start;
+    flex-wrap: nowrap;
+}
+
+.promo-content p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 38%;
+}
+
+.promo-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.promo-icon {
+    position: absolute;
+    bottom: 118px;
+    left: -12px;
+    background-color: #fff;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc;
+}
+
+.login-section h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.login-section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(239, 237, 255, 0.8);
+    border-radius: 22px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 15px 15px 35px;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    border-radius: 22px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon img {
+    max-width: 20px;
+    height: auto;
+}
+
+button[type="submit"] {
+    width: 50%;
+    padding: 19px;
+    background: linear-gradient(to right, #5a44ee, #806ef2);
+    border: none;
+    border-radius: 34px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 24%;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(to right, #ffffff, #5a67d8);
+}
+
+.login-others {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+.login-others .separator {
+    flex: 1;
+    height: 1px;
+    background-color: #dedede;
+}
+
+.login-others p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    position: relative;
+    padding: 0 10px;
+}
+
+.login-others p:before, .login-others p:after {
+    /* content: ''; */
+    border: 1px solid #dedede;
+    width: 16%;
+    position: absolute;
+    bottom: 34%;
+}
+
+.login-others p:before {
+    left: 2%;
+}
+
+.login-others p:after {
+    /* right: 50%; */
+}
+
+.login-others button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-others button img {
+    margin-right: 10px;
+}
+
+button.google, button.facebook {
+    background-color: #ffffff;
+    border-radius: 22px;
+    color: rgb(0, 0, 0);
+    border: 1px solid #b1b0b05c;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .login-section, .promo-section {
+        flex: 1;
+        padding: 40px;
+    }
+
+    .login-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .login-section p {
+        font-size: 1.2rem;
+    }
+
+    .promo-content p {
+        font-size: 2rem;
+        width: 33%;
+    }
+
+    .promo-icon {
+        left: 2%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .login-section h1 {
+        font-size: 3rem;width: 33%;
+    }
+
+    .login-section p {
+        font-size: 1.5rem;
+    }
+
+    .promo-content p {
+        font-size: 2.5rem;
+        color: #ffffff;
+    }
+}
+
+@media (min-width: 736px) {
+    .login-others p:after {
+        /* right: 17%; */
+    }
+
+    .login-others p:before {
+        left: 17%;
+    }
+}
